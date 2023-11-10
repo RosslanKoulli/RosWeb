@@ -5,7 +5,7 @@ app = Ursina()
 window.color = color.dark_gray 
 table = Entity(
     model ='cube', 
-    color = color.white,
+    color = color.black,
     scale = (2,1,3),
     rotation = (90,0,0)
 
@@ -13,7 +13,7 @@ table = Entity(
 
 ball = Entity(
     model = 'sphere',
-    color = color.red,
+    color = color.white,
     z = -1,
     scale = 0.1,
     collider = 'box'
@@ -21,7 +21,7 @@ ball = Entity(
 
 player1 = Entity(
     model = 'cube',
-    color = color.black,
+    color = color.white,
     scale = (0.6,0.1,1),
     position = (0,-1.4, -1),
     collider = 'box'
@@ -59,21 +59,21 @@ def update():
 
     if ball.intersects(player1):
         speed_y = -speed_y
-        speed_x *= 1.05
-        speed_y *= 1.05
+        speed_x *= 1.09
+        speed_y *= 1.09
 
     if ball.intersects(player2) :
         speed_y = -speed_y
-        speed_x *= 1.05
-        speed_y *= 1.05
+        speed_x *= 1.09
+        speed_y *= 1.09
         
-    if ball.y > 1.35:
+    if ball.y > 1.375:
         score_player2 += 1
         score_text2.text = str(score_player2)
         ball.x = ball.y = 0.5
         speed_x = speed_y = 0.5
 
-    if ball.y < -1.35:
+    if ball.y < -1.375:
         score_player1 += 1
         score_text1.text = str(score_player1)
         ball.x = ball.y = 0.5
