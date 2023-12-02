@@ -184,3 +184,13 @@ inputField:focus ~ .label,.inputField:valid .label{
         padding: 7.5em 1.5em 4em 1.5em;
     }
 }
+
+.centeredText {
+    display: grid ;
+    justify-content: center; 
+    align-items: center ; 
+    /* Additional styling if needed */
+    width: 50px; /* Example width */
+    height: 100px; /* Example height */
+    
+}
