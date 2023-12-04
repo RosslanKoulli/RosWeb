@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     var userField = document.getElementById('user');
     var passField = document.getElementById('pass');
     var EmailField = document.getElementById('Email');
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var EmailLabel = document.querySelector('label[for="Email"]');
 
     // Add event listeners for input fields
-    userField.addEventListener('input', function() {
+    userField.addEventListener('input', () => {
         if (userField.value !== '') {
             userLabel.style.display = 'none'; 
         } else {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    passField.addEventListener('input', function() {
+    passField.addEventListener('input', () => {
         if (passField.value !== '') {
             passLabel.style.display = 'none';
         } else {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    EmailField.addEventListener('input', function() {
+    EmailField.addEventListener('input', () => {
         if (EmailField.value !== '') {
             EmailLabel.style.display = 'none';
         } else {
